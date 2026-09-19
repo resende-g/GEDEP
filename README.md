@@ -55,7 +55,7 @@ Consulte `.env.example`. Credenciais nunca devem ser enviadas ao GitHub.
 
 O site não inclui eventos, registros, bibliografias ou produções fictícias. Ausências aparecem como **Conteúdo em construção**. Produções só são públicas quando possuem o status `approved`; submissões sempre entram como `received`.
 
-A Carta de Princípios deve ser inserida integralmente a partir do documento oficial, preservando estrutura e terminologia.
+A Carta de Princípios está publicada integralmente em `/o-discurso`, preservando a estrutura e a terminologia do documento oficial fornecido ao projeto.
 
 ## Segurança do formulário
 
