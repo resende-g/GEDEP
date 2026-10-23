@@ -1,10 +1,25 @@
 import type { Metadata } from "next";
+import { Archivo, Space_Mono } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { SITE_DESCRIPTION } from "@/lib/constants";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
+const archivo = Archivo({
+  subsets: ["latin"],
+  axes: ["wdth"],
+  display: "swap",
+  variable: "--font-archivo",
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-space-mono",
+});
 
 export const metadata: Metadata = {
   metadataBase: siteUrl ? new URL(siteUrl) : undefined,
@@ -36,8 +51,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={`${archivo.variable} ${spaceMono.variable}`}>
       <body>
+        <div className="backdrop" aria-hidden="true">
+          <span className="backdrop-blob backdrop-blob-red" />
+          <span className="backdrop-blob backdrop-blob-ink" />
+          <span className="backdrop-blob backdrop-blob-rose" />
+        </div>
         <a href="#conteudo" className="skip-link">Pular para o conteúdo</a>
         <SiteHeader />
         <div id="conteudo">{children}</div>

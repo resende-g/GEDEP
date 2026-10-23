@@ -80,7 +80,7 @@ export function SubmissionForm() {
         <small>PDF, DOC, DOCX, ODT ou TXT. Tamanho máximo: 5 MB.</small>
       </div>
       <p className="form-note">Ao enviar, a contribuição recebe o status <strong>received</strong>. Nenhum conteúdo é publicado automaticamente.</p>
-      <Button className="button h-auto rounded-none" type="submit" disabled={state.kind === "sending"}>
+      <Button className="button h-auto" type="submit" disabled={state.kind === "sending"}>
         {state.kind === "sending" ? "Enviando…" : "Enviar contribuição"}
       </Button>
       {state.kind !== "idle" && state.kind !== "sending" ? (

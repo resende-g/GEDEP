@@ -22,6 +22,16 @@ Portal institucional, arquivo histórico, calendário, biblioteca e espaço de p
 - `/producoes` e `/producoes/[slug]` — publicações aprovadas
 - `/escreva` — envio privado de contribuições
 - `/contato` — canais institucionais
+- `/busca` — busca em páginas, encontros, registros, bibliografia e produções publicadas
+
+## Design
+
+A interface segue o layout do GEDEP feito no Canva (preto, branco e vermelho `#ff3131`, títulos largos em caixa alta e mono para detalhes) com superfícies em estilo Liquid Glass: vidro translúcido com desfoque, brilho especular e bordas luminosas.
+
+- Tokens de cor, tipografia e a camada de vidro ficam em `app/globals.css`; a classe `.glass` (e variantes `.glass-red` e `.glass-popover`) aplica o efeito.
+- Fontes: Archivo (eixo de largura variável) e Space Mono, via `next/font/google`.
+- Grafismos (estrela, malha em perspectiva, linhas de velocidade, esfera em meio-tom) são SVG em `components/decor.tsx`.
+- Há fallback opaco para navegadores sem `backdrop-filter` e para quem ativa “reduzir transparência” ou “reduzir movimento”.
 
 ## Desenvolvimento
 
